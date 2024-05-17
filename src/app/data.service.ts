@@ -9,13 +9,13 @@ export class DataService {
   private dataSource = new BehaviorSubject<any>(null);
   currentData = this.dataSource.asObservable();
 
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   changeData(data: any) {
     this.dataSource.next(data);
   }
 
   fetchData(): Observable<any> {
-    return this.http.get('/assets/data.json');
+    return this.httpClient.get('/assets/data.json');
   }
 }
