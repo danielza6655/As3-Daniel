@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { SelectionComponent } from './selection/selection.component';
+import { DisplayComponent } from './display/display.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CommonModule, SelectionComponent, DisplayComponent]
 })
-export class AppComponent {
-  title = 'as3';
-}
+export class AppComponent {}

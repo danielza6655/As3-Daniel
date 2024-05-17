@@ -1,0 +1,41 @@
+{
+    "datasets": [
+    {
+        "id": 1,
+        "name": "Dataset 1",
+        "data": [
+            { "label": "January", "value": 65 },
+            { "label": "February", "value": 59 },
+            { "label": "March", "value": 80 }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Dataset 2",
+        "data": [
+        { "label": "April", "value": 81 },
+        { "label": "May", "value": 56 },
+        { "label": "June", "value": 55 }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Dataset 3",
+        "data": [
+        { "label": "July", "value": 75 },
+        { "label": "August", "value": 80 },
+        { "label": "September", "value": 90 }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Dataset 4",
+        "data": [
+        { "label": "October", "value": 72 },
+        { "label": "November", "value": 89 },
+        { "label": "December", "value": 61 }
+        ]
+    }
+
+    ]
+}

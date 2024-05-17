@@ -1,0 +1,5 @@
+<div class="selection-container">
+  <button *ngFor="let dataset of datasets" (click)="onDatasetChange(dataset)">
+    {{ dataset.name }}
+  </button>
+</div>

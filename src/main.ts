@@ -1,6 +1,15 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { importProvidersFrom } from '@angular/core';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { BaseChartDirective, provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient(),
+    importProvidersFrom(NgSelectModule, BaseChartDirective), provideCharts(withDefaultRegisterables()),
+    provideHttpClient(withFetch())
+  ]
+})
+  .catch(err => console.error(err));
